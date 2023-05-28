@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forecast App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!--complete the designing for the weather class in mobile view -->
+
+<body>
+  <!-- code for navbar -->
+  <div class="mainprojectdiv">
+    <div class="nav">
+      <div class="logosearchcontainer">
+        <h3 class="h">Forecast</h3>
+        <div class="box" id="b">
+          <input type="text" id="sb" placeholder="Hit Enter !">
+          <button id="icon"><i class="fa fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- code for main content -->
+
+    <div class="weather">
+      <div class="center">
+        <h3 class="city">Weather in Mumbai</h3>
+        <div class="tempflex">
+          <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" class="wicon">
+          <div class="temp">00°C</div>
+        </div>
+        <h3 class="description">Cloudy</h3>
+        <div class="newcontainer">
+          <div class="uw">
+            <div class="humidcontainer">
+              <div class="humidityvalue">60%</div>
+              <div class="humidity">Humidity</div>
+            </div>
+            <div class="windspeedcontainer">
+              <div class="windspeedvalue">6 km/h</div>
+              <div class="windspeed">Wind speed</div>
+            </div>
+            <div class="latitudecontainer">
+              <div class="latitudevalue">19.0760</div>
+              <div class="latitude">Latitude</div>
+            </div>
+            <div class="longitudecontainer">
+              <div class="longitudevalue">72.8777</div>
+              <div class="longitude">Longitude</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- code for daily forecast -->
+    <div class="container">
+      <p class="dfh">Daily Forecast</p>
+      <div class="dailyweather">
+        <div class="daily">
+          <h3 class="days">Monday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+        <div class="daily">
+          <h3 class="days">Tuesday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+        <div class="daily">
+          <h3 class="days">Wednesday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+        <div class="daily">
+          <h3 class="days">Thursday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+        <div class="daily">
+          <h3 class="days">Friday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+        <div class="daily">
+          <h3 class="days">Saturday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+        <div class="daily">
+          <h3 class="days">Sunday</h3>
+          <div class="diconcenter"><img src="https://openweathermap.org/img/wn/01d.png" alt="weather icon"
+              class="dicon">
+          </div>
+          <div class="minmaxcontainer">
+            <div class="min">Min: 1 °C</div>
+            <div class="max">Max: 2 °C</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/ff61fbf734.js" crossorigin="anonymous">
+    </script>
+
+    <script src="api.js"></script>
+
+    <!-- javascript -->
+    <script>
+
+      
+      const icon = document.querySelector('#icon');
+      const b = document.querySelector('.box');
+      icon.onclick = function () {
+        b.classList.toggle('active')
+      }   
+    </script>
+</body>
+
+</html>
