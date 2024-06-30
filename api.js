@@ -4,7 +4,17 @@ let displayweather = {
 
   getweather(city) {
     let a = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.key}&units=metric`;
-    fetch(a).then(res => res.json()).then(weatherdata => this.show(weatherdata))
+    fetch(a).then(res =>  {
+      if (!res.ok) {
+          throw new Error('Network response was not ok ' + res.statusText);
+        }
+        return res.json();
+    }
+    ).then(weatherdata => this.show(weatherdata))
+    .catch(error => {
+      document.querySelector('.city').innerText = `Invalid city name.`;
+    })
+  
   },
 
   show(data) {
